@@ -9,68 +9,62 @@ public class Main {
 		Scanner scan = new Scanner(System.in);
 	
 		
-		String domicilio;
-	    String nombre;
-		String descripcionProd1;
-		String descripcionProd2;
-		String fecha;
-		String razonSocial;
-		int cantidProd1;
-		int cantidProd2;
-		double precioProd1;
-		double precioProd2;
-		double precioTotal1;
-		double precioTotal2;
-		double subtotSinIva;
-		double total;
+		String Domicilio, nombre, descripcionProd1, descripcionProd2, fecha, razonSocial;
+		int cantidProd1, cantidProd2;
+		double precioProd1, total, subtotSinIva, precioTotal2, precioTotal1, precioProd2, iva, precioTot;
+	
+		
+		System.out.println("Fecha");
+		fecha = scan.nextLine();
+		
+		System.out.println("Nombre");
+		nombre = scan.nextLine();
+		
+		System.out.println("Domicilio");
+		Domicilio = scan.nextLine();
+		
+		System.out.println("Producto 1");
+		descripcionProd1 = scan.nextLine();
+		
+		System.out.println("Producto 2");
+		descripcionProd2 = scan.nextLine();
+		
+		System.out.println("Cantidad Prod. 1");
+		cantidProd1 = scan.nextInt();
+		
+		System.out.println("Cantidad Prod. 2");
+		cantidProd2 = scan.nextInt();
+		
+		System.out.println("Precio unitario Prod. 1");
+		precioProd1 = scan.nextInt();
+		
+		System.out.println("Precio unitario Prod. 2");
+		precioProd2 = scan.nextInt();
+		
+		precioTotal1 = precioProd1 * cantidProd1;
+		precioTotal2 = precioProd2 * cantidProd2;
+		subtotSinIva = precioTotal1 + precioTotal2;
+		iva = subtotSinIva * 0.21;
+		total = subtotSinIva + iva;
 		
 		
+		System.out.println("*************************************************************************************");
+		System.out.println("Fecha: " + fecha);
+		System.out.println("Nombre: " + nombre);
+		System.out.println("Domicilio: " + Domicilio);
+		System.out.println("*************************************************************************************");
+		System.out.println("\nCant.\t\t|\t\tDescripcion\t|\t\tP. unit\t\t|\tP. total\n"
+				+ "----------------------------------------------------------------------------------------------------\n"
+				+ cantidProd1 + "\t\t|\t\t" + descripcionProd1 + "\t\t|\t\t" + precioProd1 + "\t\t|\t" + precioTotal1 
+				+ "\n----------------------------------------------------------------------------------------------------\n"
+				+ cantidProd2 + "\t\t|\t\t" + descripcionProd2 + "\t\t|\t\t" + precioProd2 + "\t\t|\t" + precioTotal2
+				+ "\n----------------------------------------------------------------------------------------------------\n"
+				+ "IVA = " + iva + "\n"
+				+ "Subtotal (sin IVA) = " + subtotSinIva + "\n"
+				+ "Total = " + total);
 		
 
 		
-		System.out.println("fecha");
-		fecha = scan.nextLine();
-		
-		System.out.println("nombre");
-		nombre = scan.nextLine();
-		
-		System.out.println("domicilio");
-		domicilio = scan.nextLine();
-		
-		System.out.println("producto");
-		descripcionProd1 = scan.nextLine();
-		
-		System.out.println("producto");
-		descripcionProd2 = scan.nextLine();
-		
-		System.out.println("cantidad");
-		cantidProd1 = scan.nextInt();
-		
-		System.out.println("cantidad");
-		cantidProd2 = scan.nextInt();
-		
-		System.out.println("Precio unitario");
-		precioProd1 = scan.nextInt();
-		
-		System.out.println("Precio unitario");
-		precioProd2 = scan.nextInt();
-		
-		precioTotal1 = precioProd1 * 0.21;
-		
-		
-		
-		
-		System.out.println("*************************************************************************************");	
-		System.out.println("Fecha " + fecha);
-		System.out.println("*************************************************************************************");
-		System.out.println("Nombre " + nombre);
-		System.out.println("Domicilio " + domicilio);
-		System.out.println("Cant. | Descripcion | P. unit | P. total\r\n"
-				+ "----------------------------------------------------------------------------------------------------\r\n"
-				+ cantidProd1                +         "|" + descripcionProd1 + "|" + precioProd1 + precioTotal1
-				+ "----------------------------------------------------------------------------------------------------\r\n"
-				+ "xx | aaaaaaaaaaaaaaaaaaaaaaaa |xxxx |xxx"
-				+ "----------------------------------------------------------------------------------------------------");
 		
 		
 		
